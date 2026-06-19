@@ -13,22 +13,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Trick { 
-  id      Int      @id @default(autoincrement()) 
-  title   String   @unique
-  description    String
-  category   Category
-} 
-
-enum Category {
-  All
-  Basic
-  Acting
-  Communication
-  Agility
-  Scent_Work    @map("Scent Work")
-  Affection
-  Self_Control  @map("Self Control")
-  Utility
-  Cute_Tricks   @map("Cute Tricks")
+model Trick {
+  id          Int     @id @default(autoincrement())
+  title       String  @unique
+  description String
+  category    String
 }
